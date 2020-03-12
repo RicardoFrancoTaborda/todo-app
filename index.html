@@ -1,23 +1,17 @@
 <h1>Lista de tareas del hogar</h1>
-<input id="cajaDeText" type="text" placeholder="Nueva tarea"/>
-<button onclick="agregarTarea()">Agregar mas tareas</button>
-<ul id="listado">
-
-	<li>Hacer el mercado</li>
-	<li>Dormir</li>
-	<li>Cocinar</li>
-
-</ul>
+<input Id="cajaDeText" type="text" placeholder="Nueva tarea"/>
+<button onclick="agregarTarea()">Agregar</button>
+<ul Id="listado"></ul>
 
 <script>
-	function agregarTareas() {
-		var inputTarea =document.getElementById('cajaDeText');
-		var nuevaTarea= inputTarea.value;
-		var listadoTareas=document.getElementById('listado');
-		var liTarea=document.getElementById('li');
-		liTarea.innerHTML=nuevaTarea;
+	function agregarTarea() {
+		var inputTarea = document.getElementById('cajaDeText');
+		var nuevaTarea = inputTarea.value;
+		var listadoTareas = document.getElementById('listado');
+		var liTarea = document.createElement('li');
+		liTarea.innerHTML = nuevaTarea;
 		listadoTareas.appendChild(liTarea);
-		inputTarea.value='';
+		inputTarea.value = '';
 
 	}
 
