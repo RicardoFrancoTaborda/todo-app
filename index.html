@@ -1,19 +1,39 @@
 <h1>Lista de tareas del hogar</h1>
+
 <input Id="cajaDeText" type="text" placeholder="Nueva tarea"/>
-<button onclick="agregarTarea()">Agregar</button>
+
+<!-- este codigo es para hacer pruebas, se va a la pagina web se inspecciona se limpia lapagina y aldarleclick miramos siesta funcionando elnoton con ese pequeño texto que le escribimos
+<button onclick="console.log('boton agregar presionado')">Agregar</button>
+
 <ul Id="listado"></ul>
+-->
+<button onclick="agregarTarea()">Agregar</button>
+
+<ul Id="listado">
+	<li>desayuno</li>
+	<li>almuerzo</li>
+</ul>
+	
 
 <script>
 	function agregarTarea() {
 		var inputTarea = document.getElementById('cajaDeText');
+		/**console.log(inputTarea.value); prueba funcionamiento en la consola de la pagina**/
 		var nuevaTarea = inputTarea.value;
 		var listadoTareas = document.getElementById('listado');
+		/**console.log(listadoTareas); prueba funcionamiento en la consola de la pagina**/
 		var liTarea = document.createElement('li');
+		/**console.log(liTarea); prueba funcionamiento en la consola de la pagina**/
 		liTarea.innerHTML = nuevaTarea;
+		/**console.log(liTarea);  prueba funcionamiento en la consola de la pagina**/
+		
 		listadoTareas.appendChild(liTarea);
 		inputTarea.value = '';
 
+	
+		var x = document.createElement('span');
 	}
+	
 
 </script>
 
