@@ -9,10 +9,7 @@
 -->
 <button onclick="agregarTarea()">Agregar</button>
 
-<ul Id="listado">
-	<li>desayuno</li>
-	<li>almuerzo</li>
-</ul>
+<ul Id="listado"></ul>
 	
 
 <script>
@@ -23,16 +20,32 @@
 		var listadoTareas = document.getElementById('listado');
 		/**console.log(listadoTareas); prueba funcionamiento en la consola de la pagina**/
 		var liTarea = document.createElement('li');
-		/**console.log(liTarea); prueba funcionamiento en la consola de la pagina**/
-		liTarea.innerHTML = nuevaTarea;
+
+		var x = document.createElement('span');
+		liTarea.innerHTML = nuevaTarea + ' ';
 		/**console.log(liTarea);  prueba funcionamiento en la consola de la pagina**/
-		
+		x.innerHTML='x';
+		/**console.log(liTarea); prueba funcionamiento en la consola de la pagina**/
+		liTarea.appendChild(x);
 		listadoTareas.appendChild(liTarea);
 		inputTarea.value = '';
+		x.onclick = function(){
+			/**console.log('eliminar tarea');
+			prueba funcionamiento en la consola de la pagina
+			---------------------------------
+			console.log('eliminar tarea '+liTarea.innerHTML); prueba que esta eliminando la tarea correcta **/
+			listadoTareas.removeChild(liTarea);
+		}
+		
+		
+		
+		
+		
 
 	
-		var x = document.createElement('span');
+		
 	}
+	
 	
 
 </script>
